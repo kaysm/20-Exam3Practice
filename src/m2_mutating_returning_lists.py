@@ -83,6 +83,27 @@ def run_test_doubler():
     # -------------------------------------------------------------------------
     # TO DO 2 (continued): Add your ADDITIONAL test(s) here:
     # -------------------------------------------------------------------------
+    # Test 1:
+    arg1 = [15, 25, 30, 45]
+    arg2 = [5, 0, 8]
+    correct_arg1_after = [30, 50, 60, 90]
+    correct_arg2_after = [5, 0, 8]
+    expected = [10, 0, 16]
+
+    print()
+    print('BEFORE the function call:')
+    print('  Argument 1 is:', arg1)
+    print('  Argument 2 is:', arg2)
+
+    answer = doubler(arg1, arg2)
+
+    print('AFTER the function call:')
+    print('  Argument 1 is:       ', arg1)
+    print('  Argument 1 should be:', correct_arg1_after)
+    print('  Argument 2 is:       ', arg2)
+    print('  Argument 2 should be:', correct_arg2_after)
+    print('The returned value is:       ', answer)
+    print('The returned value should be:', expected)
 
 
 def doubler(list1, list2):

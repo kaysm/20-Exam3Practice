@@ -32,14 +32,20 @@ def run_test_zero_changer():
     print('  Actual:  ', test1)
 
     # -------------------------------------------------------------------------
-    # TODO: 2. Write at least 2 additional tests for the
+    # DONE: 2. Write at least 2 additional tests for the
     #    zero_changer
     # function.  Try to choose some unexpected things like empty lists
     # or an empty tuple, or a list with no zeros, etc.
     # -------------------------------------------------------------------------
     # Test 2:
-    test1 = ([8, 4, 0, 9], [77, 0, 0, 1, 5, 0], [4, 4, 4], [4, 0, 4])
-    expected1 = ([8, 4, 1, 9], [77, 2, 3, 1, 5, 4], [4, 4, 4], [4, 5, 4])
+    test1 = ([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                                                                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                                                                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+    expected1 = ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16], [17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27,
+                                                                           28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38,
+                                                                           39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49,
+                                                                           50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60,
+                                                                           61, 62, 63, 64, 65, 66])
     zero_changer(test1)
     print()
     print('Test 2:')
@@ -47,14 +53,13 @@ def run_test_zero_changer():
     print('  Actual:  ', test1)
 
     # Test 3:
-    test1 = ([8, 4, 0, 9], [77, 0, 0, 1, 5, 0], [4, 4, 4], [4, 0, 4])
-    expected1 = ([8, 4, 1, 9], [77, 2, 3, 1, 5, 4], [4, 4, 4], [4, 5, 4])
+    test1 = ([0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+    expected1 = ([1, 2, 3, 4, 5, 6, 7, 8, 9], [10, 11, 12, 13, 14, 15, 16, 17, 18, 19])
     zero_changer(test1)
     print()
     print('Test 3:')
     print('  Expected:', expected1)
     print('  Actual:  ', test1)
-
 
 
 def zero_changer(tuple_of_lists):
@@ -82,7 +87,7 @@ def zero_changer(tuple_of_lists):
       :type tuple_of_lists: tuple of list[int]
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
     # -------------------------------------------------------------------------
@@ -90,6 +95,12 @@ def zero_changer(tuple_of_lists):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:  10 minutes.
     # -------------------------------------------------------------------------
+    t = 0
+    for k in range(len(tuple_of_lists)):
+        for j in range(len(tuple_of_lists[k])):
+            if tuple_of_lists[k][j] == 0:
+                t = t + 1
+                tuple_of_lists[k][j] = t
 
 
 # -----------------------------------------------------------------------------
