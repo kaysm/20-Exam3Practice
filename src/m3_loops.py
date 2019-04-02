@@ -46,7 +46,7 @@ def main():
 def run_test_practice_problem3():
     """ Tests the   practice_problem3  function. """
     ###########################################################################
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  practice_problem3  function defined below.
     #   Include at least ** 2 ** ADDITIONAL tests beyond those we wrote.
     #
@@ -135,6 +135,20 @@ def run_test_practice_problem3():
     # SUGGESTION: Ask an assistant to CHECK your tests to confirm
     #             that they are adequate tests!
     ###########################################################################
+    big_list = []
+    for k in range(888, 1888):
+        big_list.append(k)
+    tests.append(st.SimpleTestCase(practice_problem3,
+                                   [888, 1000,
+                                    - math.sqrt(2) - 0.00000000001],
+                                   big_list))
+    big_list = []
+    for k in range(888, 1888):
+        big_list.append(k)
+    tests.append(st.SimpleTestCase(practice_problem3,
+                                   [888, 1000,
+                                    - math.sqrt(2) - 0.00000000001],
+                                   big_list))
 
 
 def practice_problem3(start, n, threshold):
@@ -151,7 +165,8 @@ def practice_problem3(start, n, threshold):
        practice_problem3(-2, 2, 1.3)  returns  [1, 7]
     as you can see if you work through this example using
     the numbers presented below. (Do so!)
-
+    """
+    """
     For these examples, the following (and more) numbers
     (each is rounded to 2 decimal places for the sake of brevity)
     are relevant:
@@ -217,6 +232,9 @@ def practice_problem3(start, n, threshold):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   < 15 minutes.
     ###########################################################################
+    list = []
+    for
+    return list
 
 
 # -----------------------------------------------------------------------------

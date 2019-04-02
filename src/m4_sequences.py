@@ -142,6 +142,11 @@ def practice_problem4a(sequence):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 minutes.
     ###########################################################################
+    list = []
+    for k in range(len(sequence)):
+        if type(sequence_of_sequences[k][j]) is int:
+                list = list + [sequence_of_sequences[k][j]]
+    return list
 
 
 def run_test_practice_problem4b():
